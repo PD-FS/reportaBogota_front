@@ -1,0 +1,52 @@
+page-login {
+  .splash-bg {
+    position: relative;
+    background: url('assets/img/splashbg.png') no-repeat transparent;
+    background-size: cover;
+    height: 45%;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: animatedBackground 80s linear infinite;
+  }
+
+  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }
+
+  //background-color: var(--ion-color-primary);
+    //background-color: var(--ion-color-light-shade);
+  h1{
+    font-size: 8vw;
+    margin-top: 50px;
+    font-weight: bold;
+    text-align: center;
+    //color: var(--ion-color-primary-shade);
+    color: var(--ion-color-dark);
+  }
+  .text-logo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 6vw;
+  }
+
+  .login-logo {
+    /*padding: 20px 0;
+    min-height: 200px;*/
+    background: url('assets/img/LogoReportaBogota.png') no-repeat transparent;
+    background-size: 100%;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;*/
+    width: 180px;
+    height: 180px;
+    padding-bottom: 0%;
+  }
+
+  /*.login-logo img {
+    max-width: 150px;
+  }*/
+
+  .list {
+    margin-bottom: 0;
+  }
+}
