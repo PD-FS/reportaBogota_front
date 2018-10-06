@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'category',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryPage implements OnInit {
 
-  constructor() { }
+  categories : ArrayBuffer;
+  constructor( 
+    public categoryService : CategoryService
+    ) { }
 
   ngOnInit() {
+  //}
+  //ionViewDidLoad() {
+    this.categoryService.getCategories().subscribe(
+      (data) =>
+      {
+        this.categories = data;
+        console.log(data);
+      },
+      (error) =>
+      {
+        console.error(error);
+      }
+    );
+    console.log('ionViewDidLoad CategoriesPage');
   }
 
 }
